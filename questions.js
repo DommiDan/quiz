@@ -15,5 +15,5 @@
  function myFunction() {
    document.getElementById("start").innerHTML = result;
  }
- var demo = "start quiz";
+ var demo = "Start Quiz";
  var result = demo.link("startquiz.html");
