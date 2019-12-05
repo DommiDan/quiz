@@ -10,26 +10,10 @@
 
  //After the game ends, the user can save their initials and score to a highscores view using local storage.
 
- document.getElementById("demo").addEventListener("click", myFunction);
+ document.getElementById("start").addEventListener("click", myFunction);
 
  function myFunction() {
-   document.getElementById("demo").innerHTML = result;
+   document.getElementById("start").innerHTML = result;
  }
  var demo = "start quiz";
  var result = demo.link("startquiz.html");
-
-
-var questions = [
-    {
-      title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
-      answer: "alerts"
-    },
-    
-    {
-      title: "The condition in an if / else statement is enclosed within ____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer: "parentheses"
-    },
-    ///etc.
-  ];
