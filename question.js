@@ -1,10 +1,14 @@
-//function question() {
+
+    // var myString = "Hello"
+    // var myNum = 23,
+    // var myBoolean = true;
+
+    //length tells how long the array is in console.log, also if you want to look at a specific array do console.log(myArray[1]);
     var questions = [
     {
       title: "Commonly used data types DO NOT include:",
       choices: ["strings", "booleans", "alerts", "numbers"],
       answer: "alerts",
-      an : "strings",
     },
     
     {
@@ -12,30 +16,29 @@
       choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
       answer: "parentheses"
     },
-    ///etc.
   ];
-  //score
+ console.log(questions);
 
-  var score = 0;
 
-  //loops for questions
+document.getElementById("titles").interHTML = "Commonly used data types DO NOT include:"
+console.log ("Commonly used data types DO NOT include:")
 
-  for (var i = 0; i < questions.length ; i = i + 1) {
-      // answers to questions
-      var answers = confirm(questions[i].title);
+//if click alert then right
+var title = "Commonly used data types DO NOT include:";
+var answer = "alerts";
+var title = answer
+var otherChoice = "false"
 
-      //Sequence
-    if ((answers === true && questions[i].answer === "correct") ||
-    (answers === false && questions[i].answer === "false")) {
-    // add score
-    score++;
-      alert ("Thats Correct");
+  if ( title === answer ) {
+    alert ("true");
   }
-  else {
-      alert("Nope");
-  }
-    
-  }
+    else {
+      alert("false")
+    }
 
 
-//}
+      //document.getElementById("true").innerHTML = "True";
+
+
+ 
+//else false
