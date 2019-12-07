@@ -4,20 +4,11 @@
     // var myBoolean = true;
 
     //length tells how long the array is in console.log, also if you want to look at a specific array do console.log(myArray[1]);
-    var questions = [
-    {
-      title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
-      answer: "alerts",
-    },
-    
-    {
-      title: "The condition in an if / else statement is enclosed within ____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer: "parentheses"
-    },
-  ];
- console.log(questions);
+    var myQuestions = [ "Commonly used data types DO NOT include:"]
+    var myChoices = ["strings", "booleans", "alerts", "numbers"]
+    var myAnswers = ["alerts"]
+
+    console.log(myQuestions);
 
 
 document.getElementById("titles").interHTML = "Commonly used data types DO NOT include:"
