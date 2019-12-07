@@ -32,28 +32,29 @@ var targetDiv = document.getElementById("quizwork");
 
 
 
-document.getElementById("q1").addEventListener("click", button);
-function button() {
+document.getElementById("q1").addEventListener("click", button1);
+function button1() {
   document.getElementById("q1").innerHTML = "false";
 }
 console.log("false")
 //
-document.getElementById("q2").addEventListener("click", button);
-function button() {
+document.getElementById("q2").addEventListener("click", button2);
+function button2() {
   document.getElementById("q2").innerHTML = "false";
 }
 //
-document.getElementById("q3").addEventListener("click", button);
+document.getElementById("q3").addEventListener("click", button3);
 
-function button() {
+function button3() {
   document.getElementById("q3").innerHTML = "true";
 }
 //
-document.getElementById("q4").addEventListener("click", button);
+document.getElementById("q4").addEventListener("click", button4);
 
-function button() {
+function button4() {
   document.getElementById("q4").innerHTML = "false";
 }
+
 
 // for ( interator ; condition ; incrementer )
   //for ( var i = 0 ; i < myQuestions.length; i = i + 1) {
