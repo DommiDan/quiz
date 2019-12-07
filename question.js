@@ -26,10 +26,9 @@ var targetDiv = document.getElementById("quizwork");
 
     targetDiv.textContent = "Commonly used data types DO NOT include";
 
-    var newDiv = document.createElement("div");
-    newDiv.textContent = myChoices;
-
-    targetDiv.appendChild(newDiv);
+    //var newDiv = document.createElement("div");
+    //newDiv.textContent = myChoices;
+    //targetDiv.appendChild(newDiv);
 
 
 
@@ -37,6 +36,7 @@ document.getElementById("q1").addEventListener("click", button);
 function button() {
   document.getElementById("q1").innerHTML = "false";
 }
+console.log("false")
 //
 document.getElementById("q2").addEventListener("click", button);
 function button() {
@@ -54,8 +54,6 @@ document.getElementById("q4").addEventListener("click", button);
 function button() {
   document.getElementById("q4").innerHTML = "false";
 }
-///
-
 
 // for ( interator ; condition ; incrementer )
   //for ( var i = 0 ; i < myQuestions.length; i = i + 1) {
