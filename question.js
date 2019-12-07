@@ -11,16 +11,19 @@
     console.log(myQuestions);
 
 
-document.getElementById("titles").interHTML = "Commonly used data types DO NOT include:"
-console.log ("Commonly used data types DO NOT include:")
+//document.getElementById("titles").interHTML = "Commonly used data types DO NOT include:"
+//console.log ("Commonly used data types DO NOT include:")
 
 //if click alert then right
 var title = "Commonly used data types DO NOT include:";
 var answer = "alerts";
 var title = answer
 var otherChoice = "false"
-
-  if ( title === answer ) {
+// for ( interator ; condition ; incrementer )
+  for ( var i = 0 ; i < myQuestions.length; i = i + 1) {
+    console.log(myQuestions[i] + myAnswers[i]);
+  }
+   if ( title === answer ) {
     alert ("true");
   }
     else {
