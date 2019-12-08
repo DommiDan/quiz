@@ -3,6 +3,7 @@
 // var myBoolean = true;
 
 //length tells how long the array is in console.log, also if you want to look at a specific array do console.log(myArray[1]);
+
 var myQuestions = ["Commonly used data types DO NOT include:", "how do you spell?", "What is babas?", "Um questions", "Another Question"]
 var myChoices = ["strings", "booleans", "alerts", "numbers"]
 var myChoices1 = ["bee", "beees", "b", "bananas"]
@@ -33,6 +34,7 @@ var setIntervalid;
 var index = 0;
 var highscore = document.querySelector("#highscore");
 
+//
 highscore.textContent = localStorage.getItem("topscore")
 targetDiv.textContent = myQuestions[index++]
 var startTime = function () {
@@ -59,17 +61,12 @@ var countDown = function () {
 
 }
 startTime()
-//var newDiv = document.createElement("div");
-//newDiv.textContent = myChoices;
-//targetDiv.appendChild(newDiv);
-
-
 
 document.getElementById("q1").addEventListener("click", button1);
 
 function button1() {
   document.getElementById("q1").innerHTML = "false";
-
+  
 }
 console.log("false")
 //
