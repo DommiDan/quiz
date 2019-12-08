@@ -4,25 +4,25 @@
 
 //length tells how long the array is in console.log, also if you want to look at a specific array do console.log(myArray[1]);
 
-var myQuestions = ["Commonly used data types DO NOT include:", "how do you spell?", "What is babas?", "Um questions", "Another Question"]
-var myChoices = ["strings", "booleans", "alerts", "numbers"]
-var myChoices1 = ["bee", "beees", "b", "bananas"]
-var myChoices2 = ["a", "b", "c", "d"]
-var myChoices3 = ["e", "f", "g", "h"]
-var myChoices4 = ["i", "j", "k", "l"]
-var myAnswers = ["alerts", "bee", "c", "e", "i"]
+//var myQuestions = ["Commonly used data types DO NOT include:", "how do you spell?", "What is babas?", "Um questions", "Another Question"]
+//var myChoices = ["strings", "booleans", "alerts", "numbers"]
+//var myChoices1 = ["bee", "beees", "b", "bananas"]
+//var myChoices2 = ["a", "b", "c", "d"]
+//var myChoices3 = ["e", "f", "g", "h"]
+//var myChoices4 = ["i", "j", "k", "l"]
+//var myAnswers = ["alerts", "bee", "c", "e", "i"]
 
-console.log(myQuestions);
-
+console.log(myQuest);
+var myQuest = [];
 
 //document.getElementById("titles").interHTML = "Commonly used data types DO NOT include:"
 //console.log ("Commonly used data types DO NOT include:")
 
 //if click alert then right
-var title = "Commonly used data types DO NOT include:";
-var answer = "alerts";
-var title = answer
-var otherChoice = "false"
+//var title = "Commonly used data types DO NOT include:";
+//var answer = "alerts";
+//var title = answer
+//var otherChoice = "false"
 
 var timeLeft = 75;
 
@@ -36,15 +36,16 @@ var highscore = document.querySelector("#highscore");
 
 //
 highscore.textContent = localStorage.getItem("topscore")
-targetDiv.textContent = myQuestions[index++]
+targetDiv.textContent = myQuest[index++]
 var startTime = function () {
   setIntervalid = setInterval(countDown, 1000)
 }
+
 var countDown = function () {
   timeLeft = timeLeft - 1
   if (timeLeft % 15 === 0) {
     //every 15 seconds change your  question
-     targetDiv.textContent = myQuestions[index++]
+     targetDiv.textContent = myQuest[index++]
    
   }
   if (timeLeft === 0) {
@@ -57,36 +58,74 @@ var countDown = function () {
   }
 
   timerDiv.textContent = timeLeft
-
-
 }
-startTime()
+startTime();
+
 
 document.getElementById("q1").addEventListener("click", button1);
 
 function button1() {
-  document.getElementById("q1").innerHTML = "false";
-  
+  if(document.getElementById("q1").innerHTML === questions[0].answer) {
+    alert("correct");
+  }
+  else { 
+    alert("incorrect");
+  }
 }
 console.log("false")
 //
 document.getElementById("q2").addEventListener("click", button2);
 
 function button2() {
-  document.getElementById("q2").innerHTML = "false";
+
+  if(document.getElementById("q2").innerHTML === questions[1].answer) {
+    alert("correct");
+  }
+  else { 
+    alert("incorrect");
+  }
 }
 //
 document.getElementById("q3").addEventListener("click", button3);
 
 function button3() {
-  document.getElementById("q3").innerHTML = "true";
+  if(document.getElementById("q3").innerHTML === questions[2].answer) {
+    alert("correct");
+  }
+  else { 
+    alert("incorrect");
+  }
 }
 //
 document.getElementById("q4").addEventListener("click", button4);
 
 function button4() {
-  document.getElementById("q4").innerHTML = "false";
+  if(document.getElementById("q4").innerHTML === questions[3].answer) {
+    alert("correct");
+  }
+  else { 
+    alert("incorrect");
+  }
 }
+
+
+function getQuest() {
+  document.getElementById("quest").innerHTML = questions[0].title;
+  document.getElementById("q1").innerHTML = questions[0].choices[0];
+  document.getElementById("q2").innerHTML = questions[0].choices[1];
+  document.getElementById("q3").innerHTML = questions[0].choices[2];
+  document.getElementById("q4").innerHTML = questions[0].choices[3];
+  document.getElementById("ans").innerHTML = questions[0].answer;
+}
+getQuest();
+
+
+
+
+
+
+
+
 
 
 // for ( interator ; condition ; incrementer )
