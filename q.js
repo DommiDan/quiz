@@ -1,22 +1,40 @@
-var questions = [
+
+
+
+var choice = [
     {
-      title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
+      c: ["strings"],
       answer: "alerts"
     },
     {
-      title: "The condition in an if / else statement is enclosed within ____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer:"parentheses"
+      c: ["booleans"],
+      answer:"alerts"
     },
     {
-      title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
+      c: ["alerts"],
       answer: "alerts"
     },
     {
-      title: "The condition in an if / else statement is enclosed within ____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer:"parentheses"
+      c: ["numbers"],
+      answer:"alerts"
+    },
+  ];
+
+  var questions2 = [
+    {
+      choices: ["strings"],
+      answer: "alerts"
+    },
+    {
+      choices: ["booleans"],
+      answer:"alerts"
+    },
+    {
+      choices: ["alerts"],
+      answer: "alerts"
+    },
+    {
+      choices: ["numbers"],
+      answer:"alerts"
     },
   ];
