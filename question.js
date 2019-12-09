@@ -12,31 +12,22 @@
 //var myChoices4 = ["i", "j", "k", "l"]
 //var myAnswers = ["alerts", "bee", "c", "e", "i"]
 
-console.log(myQuest);
+
 var myQuest = [];
-
-//document.getElementById("titles").interHTML = "Commonly used data types DO NOT include:"
-//console.log ("Commonly used data types DO NOT include:")
-
-//if click alert then right
-//var title = "Commonly used data types DO NOT include:";
-//var answer = "alerts";
-//var title = answer
-//var otherChoice = "false"
-
+console.log(myQuest);
 var timeLeft = 75;
 
 var targetDiv = document.getElementById("quizwork");
 var timerDiv = document.querySelector("#time");
 
-// targetDiv.textCtent = "Commonly used data types DO NOT include";
 var setIntervalid;
 var index = 0;
 var highscore = document.querySelector("#highscore");
 
-//
+
 highscore.textContent = localStorage.getItem("topscore")
 targetDiv.textContent = myQuest[index++]
+
 var startTime = function () {
   setIntervalid = setInterval(countDown, 1000)
 }
@@ -50,7 +41,7 @@ var countDown = function () {
   }
   if (timeLeft === 0) {
  
-    localStorage.setItem("topscore",20) 
+    localStorage.setItem("topscore",0) 
     highscore.textContent =  localStorage.getItem("topscore")
     timeLeft = 75
     index = 0
@@ -65,6 +56,7 @@ startTime();
 document.getElementById("q1").addEventListener("click", button1);
 
 function button1() {
+  
   if(document.getElementById("q1").innerHTML === questions[0].answer) {
     alert("correct");
   }
@@ -72,7 +64,6 @@ function button1() {
     alert("incorrect");
   }
 }
-console.log("false")
 //
 document.getElementById("q2").addEventListener("click", button2);
 
@@ -89,6 +80,7 @@ function button2() {
 document.getElementById("q3").addEventListener("click", button3);
 
 function button3() {
+
   if(document.getElementById("q3").innerHTML === questions[2].answer) {
     alert("correct");
   }
@@ -100,6 +92,7 @@ function button3() {
 document.getElementById("q4").addEventListener("click", button4);
 
 function button4() {
+
   if(document.getElementById("q4").innerHTML === questions[3].answer) {
     alert("correct");
   }
@@ -108,18 +101,19 @@ function button4() {
   }
 }
 
-
 function getQuest() {
+
   document.getElementById("quest").innerHTML = questions[0].title;
+  console.log("quest")
   document.getElementById("q1").innerHTML = questions[0].choices[0];
   document.getElementById("q2").innerHTML = questions[0].choices[1];
   document.getElementById("q3").innerHTML = questions[0].choices[2];
   document.getElementById("q4").innerHTML = questions[0].choices[3];
   document.getElementById("ans").innerHTML = questions[0].answer;
 }
-getQuest();
 
 
+console.log(getQuest)
 
 
 
