@@ -3,12 +3,57 @@
 // var myBoolean = true;
 
 //length tells how long the array is in console.log, also if you want to look at a specific array do console.log(myArray[1]);
+var choicess = [
+    "strings",
+    "butter" ,
+    "alerts",
+    "num"
+];
 
 var myQuest = ["Commonly used data types DO NOT include:", "how do you spell?", "What is babas?", "Um questions", "Another Question"]
 
 
-console.log(myQuest);
 
+//console.log(myQuest);
+console.log(myQuest)
+
+
+//var targetDiv = document.getElementById("quest");
+//targetDiv.textContent = choicess;
+//var targetDiv = document.getElementById("quizwork");
+//var timerDiv = document.querySelector("#time");
+
+//var setIntervalid;
+//var index = 0;
+
+
+var setIntervalid;
+var index = 0;
+var timeLeft = 75;
+var targetDiv = document.getElementById("q1");
+targetDiv.textContent = choicess[index];
+var timerDiv = document.querySelector("#time");
+
+
+
+var startTime = function () {
+  setIntervalid = setInterval(countDown, 1000)
+}
+
+
+var countDown = function () {
+  timeLeft = timeLeft - 1
+  if (timeLeft % 15 === 0) {
+    //every 15 seconds change your question
+     targetDiv.textContent = choicess[index++]
+   
+  }
+  timerDiv.textContent = timeLeft
+}
+
+
+
+///
 var timeLeft = 75;
 var targetDiv = document.getElementById("quest");
 targetDiv.textContent = myQuest;
@@ -50,12 +95,18 @@ var countDown = function () {
 }
 startTime();
 
+//
 
+
+
+
+
+//
 document.getElementById("q1").addEventListener("click", button1);
 
 function button1() {
 
-  if(document.getElementById("q1").innerHTML === choice[0].answer) {
+  if(document.getElementById("q1").innerHTML === choicess[0].answer) {
     alert("correct");
   }
   else { 
@@ -68,10 +119,11 @@ document.getElementById("q2").addEventListener("click", button2);
 
 function button2() {
 
-  if(document.getElementById("q2").innerHTML === choice[1].answer) {
+  if(document.getElementById("q2").innerHTML === choicess[1].answer) {
     alert("correct");
   }
   else { 
+    timeLeft % 15 === 0
     alert("incorrect");
   }
 }
@@ -80,10 +132,11 @@ document.getElementById("q3").addEventListener("click", button3);
 
 function button3() {
 
-  if(document.getElementById("q3").innerHTML === choice[2].answer) {
+  if(document.getElementById("q3").innerHTML === choicess[2].answer) {
     alert("correct");
   }
   else { 
+    timeLeft % 15 === 0
     alert("incorrect");
   }
 }
@@ -92,32 +145,32 @@ document.getElementById("q4").addEventListener("click", button4);
 
 function button4() {
 
-  if(document.getElementById("q4").innerHTML === choice[3].answer) {
+  if(document.getElementById("q4").innerHTML === choicess[3].answer) {
     alert("correct");
   }
   else { 
+    timeLeft % 15 === 0
     alert("incorrect");
   }
 }
 
-function getQuest() {
+//function getQuest() {
 
-  document.getElementById("quest").innerHTML = choice[0].title;
+  //document.getElementById("quest").innerHTML = choice[0].title;
   console.log("quest")
-  document.getElementById("q1").innerHTML = choice[0].c[0];
-  document.getElementById("q2").innerHTML = choice[0].c[1];
-  document.getElementById("q3").innerHTML = choice[0].c[2];
-  document.getElementById("q4").innerHTML = choice[0].c[3];
-  document.getElementById("ans").innerHTML = choice[0].answer;
-}
+  //document.getElementById("q1").innerHTML = choice[0].c[0];
+  //document.getElementById("q2").innerHTML = choice[0].c[1];
+  //document.getElementById("q3").innerHTML = choice[0].c[2];
+  //document.getElementById("q4").innerHTML = choice[0].c[3];
+  //document.getElementById("ans").innerHTML = choice[0].answer;
+//}
 
-
-console.log(getQuest)
+//console.log(getQuest)
 
 
 //for ( interator ; condition ; incrementer )
-for ( var i = 0 ; i < myQuest.length; i = i + 1) {
- }
+//for ( var i = 0 ; i < myQuest.length; i = i + 1) {
+ //}
 // if ( title === answer ) {
 // alert ("true");
 //}
@@ -125,8 +178,9 @@ for ( var i = 0 ; i < myQuest.length; i = i + 1) {
 // alert("false")
 //}
 
-console.log(myQuest)
-
+//console.log(choicess)
+//for ( var i = 0 ; i < choicess.length; i = i + 1) {
+//}
 //document.getElementById("true").innerHTML = "True";
 
 
